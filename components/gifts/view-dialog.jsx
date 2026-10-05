@@ -2,7 +2,7 @@ import Modal from './modal.jsx'
 
 /**
  * Shown before opening an unclaimed gift's product page, as a reminder to
- * come back and claim it. Both "go" choices are real links so the new tab
+ * come back and claim it. The "go" choice is a real link so the new tab
  * isn't eaten by a popup blocker.
  */
 export default function ViewDialog({ gift, onClose }) {
@@ -23,16 +23,6 @@ export default function ViewDialog({ gift, onClose }) {
           onClick={onClose}
         >
           I acknowledge that if I buy this I will return and claim it.
-          <span className="visually-hidden"> (opens in a new tab)</span>
-        </a>
-        <a
-          className="btn btn--secondary"
-          href={gift.productUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={onClose}
-        >
-          I just want to look, I don’t currently intend to buy.
           <span className="visually-hidden"> (opens in a new tab)</span>
         </a>
         <button type="button" className="btn btn--ghost" onClick={onClose}>
